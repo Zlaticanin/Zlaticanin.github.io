@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Birthday Cake</title>
+    <title>Srecan Rodjendan!</title>
     <style>
         /* Set full height and remove default margin and padding */
         html, body {
@@ -60,16 +60,52 @@
             color: #fff;
             cursor: pointer;
         }
+
+        .cake .navigation {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .cake .navigation .arrow {
+            position: relative;
+            width: 0;
+            height: 0;
+            border-bottom: 10px solid #000;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+        }
+
+        .cake .navigation .arrow.up {
+            transform: rotate(180deg);
+            border-bottom-color: #fff;
+        }
+
     </style>
 </head>
 <body>
 <div class="cake">
-    <img src="cake.gif" alt="Birthday cake" />
+    <img src="cake.gif" alt="Srecan Rodj" />
+    <div class="caption">Sretan rođendan!</div>
     <div class="pop-up">
         <img src="gift.jpg" alt="Pop-up image" />
         <div class="close-btn">&times;</div>
     </div>
+    <div class="navigation">
+        <i class="arrow up"></i>
+    </div>
 </div>
+
 
 <script>
     // Get the cake and pop-up elements
