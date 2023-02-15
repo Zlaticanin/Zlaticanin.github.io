@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthday Cake</title>
+    <style>
+        /* Set full height and remove default margin and padding */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styles for the cake div */
+        .cake {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 700px;
+            width: 700px;
+            background: linear-gradient(to bottom, #ffcc99, #ff6600);
+            border-radius: 50% 50% 0 0;
+            box-shadow: 0px 10px 20px #666;
+        }
+
+
+        /* Styles for the cake image */
+        .cake img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 350px;
+            width: 350px;
+            z-index: 1;
+        }
+
+        /* Styles for the pop-up image */
+        .cake .pop-up {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* Styles for the close button */
+        .cake .pop-up .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="cake">
+    <img src="cake.gif" alt="Birthday cake" />
+    <div class="pop-up">
+        <img src="gift.jpg" alt="Pop-up image" />
+        <div class="close-btn">&times;</div>
+    </div>
+</div>
+
+<script>
+    // Get the cake and pop-up elements
+    var cake = document.querySelector('.cake');
+    var popUp = cake.querySelector('.pop-up');
+
+    // Add a click event listener to the cake
+    cake.addEventListener('click', function() {
+        // Show the pop-up
+        popUp.style.display = 'flex';
+    });
+
+    // Add a click event listener to the close button
+    popUp.querySelector('.close-btn').addEventListener('click', function() {
+        // Hide the pop-up
+        popUp.style.display = 'none';
+    });
+</script>
+</body>
+</html>
